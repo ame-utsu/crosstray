@@ -23,7 +23,8 @@ module Tray =
       stream
       |> TrayIcon.create
       |> TrayIcon.setMenu (NativeMenu.create items)
-      |> TrayIcon.updateText "sample project"
+      |> TrayIcon.updateText "crosstray"
       |> TrayIcon.onClick (fun _ -> printfn "click")
+      |> TrayIcon.showIcon
     | Error ex -> failwith ex
 
